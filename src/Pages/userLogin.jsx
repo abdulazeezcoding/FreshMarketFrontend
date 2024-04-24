@@ -73,7 +73,7 @@ export default function UserLogin() {
                 <p className="error">
                   {errors.email && touched.email && errors.email}
                 </p>
-                {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
+                {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties...*/}
                 <input
                   type="password"
                   name="password"
