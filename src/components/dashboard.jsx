@@ -23,7 +23,7 @@ export default function DashboardContent() {
   const getOrders = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:4000/api/order`);
+      const response = await fetch(`${process.env.FRESH_MARKET_API}/api/order`);
       const data = await response.json();
       console.log("orders", data);
       setOrderData(data);
@@ -37,7 +37,7 @@ export default function DashboardContent() {
     try {
       setLoading(true);
 
-      const response = await fetch(`http://localhost:4000/api/product`);
+      const response = await fetch(`${process.env.FRESH_MARKET_API}/api/product`);
       const data = await response.json();
       console.log("products", data);
       setProductData(data);
@@ -51,7 +51,7 @@ export default function DashboardContent() {
   const getCounts = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:4000/counts");
+      const response = await fetch(`${process.env.FRESH_MARKET_API}/counts`);
       const data = await response.json();
       console.log("response:", data);
       setCounts(data);

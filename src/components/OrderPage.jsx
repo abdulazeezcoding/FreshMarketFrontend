@@ -15,7 +15,7 @@ export const OrderPage = () => {
     try {
       //   console.log(`${process.env.BACKEND_URI}/product`);
       setLoading(true);
-      const response = await fetch(`http://localhost:4000/api/order`);
+      const response = await fetch(`${process.env.FRESH_MARKET_API}/api/order`);
       const data = await response.json();
       console.log(data);
       setOrders(data);

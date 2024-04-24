@@ -20,7 +20,7 @@ export const EditOrders = () => {
   const getOrder = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4000/api/order/${params.id}`
+        `${process.env.FRESH_MARKET_API}/api/order/${params.id}`
       );
       const data = await response.json();
 
@@ -57,7 +57,7 @@ export const EditOrders = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:4000/api/order/${params.id}`,
+        `${process.env.FRESH_MARKET_API}/api/order/${params.id}`,
         {
           method: "PATCH",
           headers: {

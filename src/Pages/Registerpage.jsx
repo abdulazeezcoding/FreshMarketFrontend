@@ -18,7 +18,7 @@ export default function Registerpage() {
 
   const handleSubmit = async (values) => {
     console.log(values);
-    const response = await fetch("http://localhost:4000/users", {
+    const response = await fetch(`${process.env.FRESH_MARKET_API}/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

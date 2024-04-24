@@ -20,7 +20,7 @@ export default function UserLogin() {
     }
   }, []);
   const handleSubmit = async (e) => {
-    const response = await fetch("http://localhost:4000/users/login", {
+    const response = await fetch(`${process.env.FRESH_MARKET_API}/users/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

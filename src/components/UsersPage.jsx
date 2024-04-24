@@ -14,7 +14,7 @@ export const UsersPage = () => {
     try {
       setLoading(true);
      
-      const response = await fetch(`http://localhost:4000/users`);
+      const response = await fetch(`${process.env.FRESH_MARKET_API}/users`);
       const data = await response.json();
       console.log(data);
       setUsers(data);
