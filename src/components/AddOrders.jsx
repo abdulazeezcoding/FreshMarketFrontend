@@ -32,7 +32,7 @@ export const AddOrders = () => {
     };
 
     try {
-      const response = await fetch(`${process.env.FRESH_MARKET_API}/api/order`, {
+      const response = await fetch(`${process.env.REACT_APP_FRESH_MARKET_API}/api/order`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

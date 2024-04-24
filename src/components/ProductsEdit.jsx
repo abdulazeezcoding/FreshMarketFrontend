@@ -19,7 +19,7 @@ export const ProductsEdit = () => {
   const getProduct = async () => {
     try {
       const response = await fetch(
-        `${process.env.FRESH_MARKET_API}/api/product/${params.id}`
+        `${process.env.REACT_APP_FRESH_MARKET_API}/api/product/${params.id}`
       );
       const data = await response.json();
 
@@ -47,7 +47,7 @@ export const ProductsEdit = () => {
 
     try {
       const response = await fetch(
-        `${process.env.FRESH_MARKET_API}/api/product/${params.id}`,
+        `${process.env.REACT_APP_FRESH_MARKET_API}/api/product/${params.id}`,
         {
           method: "PATCH",
           headers: {

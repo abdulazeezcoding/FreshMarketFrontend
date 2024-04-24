@@ -20,7 +20,7 @@ export default function UserLogin() {
     }
   }, []);
   const handleSubmit = async (e) => {
-    const response = await fetch(`${process.env.FRESH_MARKET_API}/users/login`, {
+    const response = await fetch(`${process.env.REACT_APP_FRESH_MARKET_API}/users/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ export default function UserLogin() {
     const data = await response.json();
     console.log(data);
     if (data && data.token) {
-      console.log('checking:', data.token)
+      // console.log('checking:', data.token)
       localStorage.setItem("token", data.token);
       navigate("/dashboard");
     }

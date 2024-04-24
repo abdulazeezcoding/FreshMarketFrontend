@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md";
 export default function ProductDelete({ productId }) {
   const onDeleteHandler = async () => {
     try {
-      await fetch(`${process.env.FRESH_MARKET_API}/api/product/${productId}`, {
+      await fetch(`${process.env.REACT_APP_FRESH_MARKET_API}/api/product/${productId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

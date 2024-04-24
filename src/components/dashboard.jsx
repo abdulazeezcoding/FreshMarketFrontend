@@ -37,7 +37,7 @@ export default function DashboardContent() {
     try {
       setLoading(true);
 
-      const response = await fetch(`${process.env.FRESH_MARKET_API}/api/product`);
+      const response = await fetch(`${process.env.REACT_APP_FRESH_MARKET_API}/api/product`);
       const data = await response.json();
       console.log("products", data);
       setProductData(data);
@@ -51,7 +51,7 @@ export default function DashboardContent() {
   const getCounts = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${process.env.FRESH_MARKET_API}/counts`);
+      const response = await fetch(`${process.env.REACT_APP_FRESH_MARKET_API}/counts`);
       const data = await response.json();
       console.log("response:", data);
       setCounts(data);

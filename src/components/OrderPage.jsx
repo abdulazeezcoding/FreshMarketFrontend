@@ -15,7 +15,7 @@ export const OrderPage = () => {
     try {
       //   console.log(`${process.env.BACKEND_URI}/product`);
       setLoading(true);
-      const response = await fetch(`${process.env.FRESH_MARKET_API}/api/order`);
+      const response = await fetch(`${process.env.REACT_APP_FRESH_MARKET_API}/api/order`);
       const data = await response.json();
       console.log(data);
       setOrders(data);

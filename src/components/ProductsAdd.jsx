@@ -25,7 +25,7 @@ export const ProductsAdd = () => {
     };
 
     try {
-      const response = await fetch(`${process.env.FRESH_MARKET_API}/api/product`, {
+      const response = await fetch(`${process.env.REACT_APP_FRESH_MARKET_API}/api/product`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
